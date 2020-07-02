@@ -5,10 +5,9 @@ import uploadConfig from '@config/upload';
 
 import AppError from '@shared/errors/AppError';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider'
+import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider';
 
 import User from '@modules/users/infra/typeorm/entities/User';
-
 
 interface IRequest {
   user_id: string;
