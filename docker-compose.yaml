@@ -1,17 +1,17 @@
 version: '3'
 
 services:
-  gobarber-app:
-    build: .
-    container_name: app
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    tty: true
-    #ports:
-    #  - "3000:3000"
-    depends_on:
-      - database
+  # gobarber-app:
+  #   build: .
+  #   container_name: app
+  #   volumes:
+  #     - .:/usr/src/app
+  #     - /usr/src/app/node_modules
+  #   tty: true
+  #   #ports:
+  #   #  - "3000:3000"
+  #   depends_on:
+  #     - database
 
   database:
     image: postgres
@@ -33,15 +33,14 @@ services:
     ports:
       - 6379:6379
 
-  # mongodb:
-  #   image: mongo
-  #   container_name: gobarber-mongo
-  #   restart: always
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: mongo
-  #     MONGO_INITDB_ROOT_PASSWORD: ''
-  #   networks:
-  #     - node-network
+  mongodb:
+    image: mongo
+    container_name: gobarber-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+    ports:
+      - 27018:27017
 
 volumes:
   pgdata:
