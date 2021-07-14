@@ -1,3 +1,19 @@
+
+## API Agendamento de horários GoBarber
+Node version: v14.15.4
+## How to install
+```
+yarn
+yarn typeorm migration:run
+```
+## How to run
+
+```
+docker-compose up -d
+yarn dev:server
+```
+
+
 ## Alguns requisitos
 
 # Recuperação de senha
