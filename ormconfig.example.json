@@ -20,6 +20,7 @@
   "name": "mongo",
   "type": "mongodb",
   "host": "localhost",
+  "password": "mongo",
   "port": 27018,
   "database": "gostack_gobarber",
   "useUnifiedTopology": true,

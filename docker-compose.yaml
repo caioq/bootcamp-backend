@@ -39,6 +39,7 @@ services:
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
     ports:
       - 27018:27017
 
