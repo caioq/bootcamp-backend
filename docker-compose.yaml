@@ -38,6 +38,7 @@ services:
     container_name: gobarber-mongo
     restart: always
     environment:
+      MONGO_INITDB_DATABASE: gostack_gobarber
       MONGO_INITDB_ROOT_USERNAME: mongo
       MONGO_INITDB_ROOT_PASSWORD: mongo
     ports:
